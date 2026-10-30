@@ -41,7 +41,7 @@ public abstract class AbstractMicroservice implements MicroserviceProxy<Object> 
         return Map.of();
     }
 
-    protected static void simulateLatency() {
+    protected void simulateLatency() {
         try {
             Thread.sleep(ThreadLocalRandom.current().nextLong(20, 250));
         } catch (InterruptedException e) {
